@@ -1,1 +1,3 @@
-# aggregation-highjight-time
+Форматирование даты публикации
+
+![Alt Text](./time.png)
