@@ -6,7 +6,7 @@ export default function Video(props) {
 
     return (
         <div className="item item-video">
-            <iframe src={url} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src={url} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
             <p className="views">Просмотров: {views}</p>
         </div>
     )

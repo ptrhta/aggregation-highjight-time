@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
-import Highlight from './Highlight/Highlight.jsx';
+import uuid from 'react-uuid';
+import withHighlight from './withHighlight/withHighlight.jsx';
 import Video from './Video/Video.jsx';
 import Article from './Article/Article.jsx';
 
-const HighlightArticle = Highlight(Article);
-const HighlightVideo = Highlight(Video);
+const HighlightArticle = withHighlight(Article);
+const HighlightVideo = withHighlight(Video);
 
 export default function List(props) {
     const list = props.list;
@@ -13,12 +14,12 @@ export default function List(props) {
         switch (item.type) {
             case 'video':
                 return (
-                    <HighlightVideo {...item} />
+                    <HighlightVideo key={uuid()} {...item} />
                 );
 
             case 'article':
                 return (
-                    <HighlightArticle {...item} />
+                    <HighlightArticle key={uuid()} {...item} />
                 );
         }
     });
